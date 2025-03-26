@@ -17,14 +17,22 @@ echo 'copied password ~ user:$6%randomsalt$hashedpassword' > hash.txt
 
 ![image](https://github.com/user-attachments/assets/2f53de57-0ef5-4e96-ab11-9000018810ef)
 
-# Install Wordlists Package and then Extract It
+# Download rockyou.txt and move to a Standard Location
 ```
-sudo apt install wordlists -y
-gunzip /usr/share/wordlists/rockyou.txt.gz
-
-#Check Installation
-ls -lh /usr/share/wordlists/rockyou.txt
-
 wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+sudo mkdir -p /usr/share/wordlists/
+sudo mv rockyou.txt /usr/share/wordlists
 
 ```
+
+# Install clinfo and check GPU
+```
+#optional
+sudo apt install clinfo
+```
+
+# Run John for password Cracking
+```
+john --wordlist=/usr/share/wordlists/rockyou.txt --fork=$(nproc) hash.txt
+```
+
