@@ -1,3 +1,5 @@
+## Using John the Ripper
+
 # Update your System
 ```
 sudo apt update && sudo apt upgrade -y
@@ -35,4 +37,21 @@ sudo apt install clinfo
 ```
 john --wordlist=/usr/share/wordlists/rockyou.txt --fork=$(nproc) hash.txt
 ```
+nproc identifies the number of cpu cores and forks those many processes to make the cracking faster
+![image](https://github.com/user-attachments/assets/ca0c88a5-0770-4cb9-8355-6db1f37a30e7)
+
+You can check the status by pressing almost any key except (q) [for quitting]
+![image](https://github.com/user-attachments/assets/9078f4b6-80ce-497b-aacf-4180a3a5295b)
+
+
+# Use Keyboard interrupt to stop once cracked 
+```
+john --show hash.txt
+```
+
+![image](https://github.com/user-attachments/assets/5cb995c0-c535-4569-9ecc-01a9e37d91ac)
+
+## Use HashCat to crack passwords
+
+# To be updated
 
