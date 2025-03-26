@@ -1,17 +1,17 @@
-## Using John the Ripper
+# Using John the Ripper
 
-# Update your System
+## Update your System
 ```
 sudo apt update && sudo apt upgrade -y
 ```
 
-# Install JohnTheRipper and check installation
+## Install JohnTheRipper and check installation
 ```
 sudo apt install john -y
 john --version
 ```
 
-# Extract a Password Hash from /etc/shadow
+## Extract a Password Hash from /etc/shadow
 ```
 sudo cat /etc/shadow
 echo 'copied password ~ user:$6%randomsalt$hashedpassword' > hash.txt
@@ -51,7 +51,48 @@ john --show hash.txt
 
 ![image](https://github.com/user-attachments/assets/5cb995c0-c535-4569-9ecc-01a9e37d91ac)
 
-## Use HashCat to crack passwords
+# Use HashCat to crack passwords
 
-# To be updated
+## To be updated
+
+# Task 3
+```
+# create a new user
+sudo adduser chaitanya
+sudo cat /etc/shadow
+sudo cat /etc/passwd
+
+# change user on terminal
+su chaitanya
+
+# check the logged in user
+whoami
+
+exit
+
+# change user's home directory
+sudo usermod -d / chaitanya
+```
+
+```
+sudo addgroup groupname
+
+sudo cat /etc/group
+```
+![image](https://github.com/user-attachments/assets/4f15c447-4bde-46ae-b39d-ff0ede66d8f5)
+
+```
+
+```
+#add user to a group
+sudo adduser username groupname
+
+#append user to another groups
+sudo usermod -aG groupname username
+
+#change users primary group
+sudo usermod -g groupname username
+```
+![image](https://github.com/user-attachments/assets/fdab95d1-5d59-4f34-b92e-c04e4063f166)
+
 
