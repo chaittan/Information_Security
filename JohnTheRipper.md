@@ -24,4 +24,7 @@ gunzip /usr/share/wordlists/rockyou.txt.gz
 
 #Check Installation
 ls -lh /usr/share/wordlists/rockyou.txt
+
+wget https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt
+
 ```
